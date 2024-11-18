@@ -140,7 +140,7 @@ Selecting `y` will display the relevant help message.
 ## Issues and Contributions
 
 If you encounter issues or have ideas for improvement:
-1. Check the [Issues](https://github.com/YOUR-USERNAME/randomTools/issues) page.
+1. Check the [Issues](https://github.com/Apry-dev/randomTools/issues) page.
 2. Submit a detailed bug report or feature request.
 
 To contribute:
@@ -172,11 +172,3 @@ Developed and maintained by **Apry**. :3
 
 
 ---
-
-### Key Features of the `README.md`:
-1. **Clear Structure**: Sections are divided into features, commands, installation, and contribution guidelines.
-2. **Detailed Commands**: Each command and its options are explained with examples.
-3. **Contributor-Friendly**: Encourages others to contribute with clear instructions.
-4. **Formatted for GitHub**: Optimized for rendering on GitHub.
-
-Let me know if you'd like to make further adjustments! :3
