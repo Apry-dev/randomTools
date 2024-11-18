@@ -1,7 +1,7 @@
 
 # randomTools
 
-**randomTools** is a dynamic, extensible project designed to provide a variety of utilities, such as listing open windows, opening files, and more. This project is actively under development, and new features will be added over time.
+**randomTools** is a project designed to provide a variety of utilities, such as listing open windows, opening files, and more. This project is actively under development, and new features will be added over time.
 
 ---
 
@@ -158,17 +158,7 @@ To contribute:
    git push origin feature-branch
    ```
 
----
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for more details.
-
----
-
 ## Author
 
 Developed and maintained by **Apry**. :3
-
-
 ---
