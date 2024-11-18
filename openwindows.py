@@ -5,6 +5,9 @@ import argparse
 import pygetwindow as gw
 from ctypes import windll
 
+# List of valid viewers
+VALID_VIEWERS = ['Notepad', 'code', 'WordPad', 'notepad.exe', 'write.exe']
+
 def get_screen_size():
     # Use ctypes to get the screen size on Windows
     user32 = windll.user32
@@ -12,7 +15,18 @@ def get_screen_size():
     screen_height = user32.GetSystemMetrics(1)
     return screen_width, screen_height
 
+def validate_viewer(viewer):
+    """Check if the provided viewer is valid."""
+    if viewer not in VALID_VIEWERS:
+        print(f"Error: '{viewer}' is not a valid viewer.")
+        print("Valid viewers are:")
+        for valid_viewer in VALID_VIEWERS:
+            print(f"  - {valid_viewer}")
+        exit()
+
 def open_file(filename, num_windows=5, viewer='Notepad'):
+    validate_viewer(viewer)  # Validate the viewer before proceeding
+
     current_dir = os.getcwd()  # Get current directory
     test = os.path.join(current_dir, filename)  # Create full path
 

@@ -3,12 +3,12 @@
         "description": "List Windows open on the tool bar",
         "filename": "listWindows.py",
         "packages": [
-            "pygetwindow",
             "math",
+            "pygetwindow",
             "psutil",
-            "os",
+            "argparse",
             "subprocess",
-            "argparse"
+            "os"
         ]
     },
     "ow": {
@@ -16,11 +16,11 @@
         "filename": "openwindows.py",
         "packages": [
             "pygetwindow",
-            "ctypes",
-            "subprocess",
-            "os",
+            "argparse",
             "time",
-            "argparse"
+            "subprocess",
+            "ctypes",
+            "os"
         ]
     }
 }
