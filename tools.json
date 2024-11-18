@@ -1,0 +1,26 @@
+{
+    "lw": {
+        "description": "List Windows open on the tool bar",
+        "filename": "listWindows.py",
+        "packages": [
+            "pygetwindow",
+            "math",
+            "psutil",
+            "os",
+            "subprocess",
+            "argparse"
+        ]
+    },
+    "ow": {
+        "description": "Open windows with a specified file",
+        "filename": "openwindows.py",
+        "packages": [
+            "pygetwindow",
+            "ctypes",
+            "subprocess",
+            "os",
+            "time",
+            "argparse"
+        ]
+    }
+}
