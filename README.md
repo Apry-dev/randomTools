@@ -9,7 +9,6 @@
 
 - **List Open Windows**: Displays all open windows and their titles in a structured format.
 - **Open Files**: Opens a specified file in multiple windows with a chosen viewer application.
-- **Dynamic CLI**: Includes command-line arguments for flexible usage.
 - **Error Handling**: Provides detailed help pages for fixing errors encountered during runtime.
 
 ---
