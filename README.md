@@ -19,7 +19,7 @@ To get started with **randomTools**, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/randomTools.git
+   git clone https://github.com/Apry-dev/randomTools.git
    ```
 
 2. Navigate to the project directory:
