@@ -3,24 +3,24 @@
         "description": "List Windows open on the tool bar",
         "filename": "listWindows.py",
         "packages": [
-            "math",
-            "pygetwindow",
-            "psutil",
             "argparse",
+            "os",
+            "pygetwindow",
             "subprocess",
-            "os"
+            "math",
+            "psutil"
         ]
     },
     "ow": {
         "description": "Open windows with a specified file",
         "filename": "openwindows.py",
         "packages": [
-            "pygetwindow",
             "argparse",
+            "os",
             "time",
+            "pygetwindow",
             "subprocess",
-            "ctypes",
-            "os"
+            "ctypes"
         ]
     }
 }

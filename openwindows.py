@@ -5,8 +5,18 @@ import argparse
 import pygetwindow as gw
 from ctypes import windll
 
-# List of valid viewers
-VALID_VIEWERS = ['Notepad', 'code', 'WordPad', 'notepad.exe', 'write.exe']
+# Mapping of file extensions to valid viewers
+EXTENSION_VIEWER_MAP = {
+    '.txt': ['Notepad', 'notepad.exe', 'code', 'WordPad', 'write.exe'],
+    '.py': ['code', 'Notepad', 'notepad.exe'],
+    '.md': ['code', 'Notepad', 'notepad.exe', 'WordPad', 'write.exe'],
+    '.png': ['mspaint', 'Photos', 'paint.exe'],
+    '.jpg': ['mspaint', 'Photos', 'paint.exe'],
+    '.jpeg': ['mspaint', 'Photos', 'paint.exe'],
+    '.pdf': ['Acrobat', 'code'],
+    '.docx': ['WordPad', 'write.exe', 'Word'],
+    '.xlsx': ['Excel'],
+}
 
 def get_screen_size():
     # Use ctypes to get the screen size on Windows
@@ -15,18 +25,18 @@ def get_screen_size():
     screen_height = user32.GetSystemMetrics(1)
     return screen_width, screen_height
 
-def validate_viewer(viewer):
-    """Check if the provided viewer is valid."""
-    if viewer not in VALID_VIEWERS:
-        print(f"Error: '{viewer}' is not a valid viewer.")
-        print("Valid viewers are:")
-        for valid_viewer in VALID_VIEWERS:
+def validate_viewer(filename, viewer):
+    """Validate if the viewer can open the file based on its extension."""
+    file_ext = os.path.splitext(filename)[-1].lower()  # Get file extension
+    valid_viewers = EXTENSION_VIEWER_MAP.get(file_ext, [])  # Get valid viewers for the extension
+    if viewer not in valid_viewers:
+        print(f"Error: '{viewer}' cannot open files with the '{file_ext}' extension.")
+        print("Valid viewers for this file type are:")
+        for valid_viewer in valid_viewers:
             print(f"  - {valid_viewer}")
         exit()
 
 def open_file(filename, num_windows=5, viewer='Notepad'):
-    validate_viewer(viewer)  # Validate the viewer before proceeding
-
     current_dir = os.getcwd()  # Get current directory
     test = os.path.join(current_dir, filename)  # Create full path
 
@@ -44,6 +54,9 @@ def open_file(filename, num_windows=5, viewer='Notepad'):
         else:
             print(f"The file '{filename}' does not exist in the current or parent directory.")
             exit()
+
+    # Validate viewer before proceeding
+    validate_viewer(filename, viewer)
 
     # Open the file in multiple windows with the specified viewer
     for _ in range(num_windows):

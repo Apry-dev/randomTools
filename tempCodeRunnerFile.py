@@ -1,0 +1,1 @@
+                    f"Memory: {memory_display}, Disk Usage: {disk_display} bytes, "

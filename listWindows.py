@@ -85,8 +85,8 @@ def display_top_processes(order_by=None, significant_digits=None, output_file="o
         net_display = f"{proc['net_usage'] / (10 ** (len(str(proc['net_usage'])) - significant_digits)):.{significant_digits}f}" if significant_digits else f"{proc['net_usage']:,} "
 
         output_str += (f"PID: {proc['pid']}, Name: {proc['name']}, CPU: {proc['cpu_percent']}%, "
-                       f"Memory: {memory_display}, Disk Usage: {disk_display} bytes, "
-                       f"Net Usage: {net_display} counts\n")
+                    f"Memory: {memory_display}, Disk Usage: {disk_display} bytes, "
+                    f"Net Usage: {net_display} counts\n")
 
     with open(output_file, 'w') as f:
         f.write(output_str)
