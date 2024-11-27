@@ -157,8 +157,8 @@ To contribute:
    ```bash
    git push origin feature-branch
    ```
-
-## Author
+---
+ Author
 
 Developed and maintained by **Apry**. :3
----
+
